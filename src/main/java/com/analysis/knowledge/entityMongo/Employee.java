@@ -1,17 +1,19 @@
-package com.analysis.knowledge.dto;
+package com.analysis.knowledge.entityMongo;
+
+import javax.persistence.Id;
+
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Data
+@Document(collection="Employee")
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Employee {
 
 	
@@ -30,5 +32,4 @@ public class Employee {
 	  
 	@JsonProperty(value = "employment_status")
 	private String employmentStatus;
-	
 }
